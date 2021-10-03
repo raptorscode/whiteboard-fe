@@ -5,7 +5,7 @@
 4. Open http://localhost:3000
 5. Code inside /src
 
-## Recommended IDE Setup
+## IDE Setup
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
