@@ -1,7 +1,7 @@
 # How To
-1. $`git clone ; cd whiteboard-vue3`
-2. $`npm install`
-3. $`npm run dev`
+1. `git clone https://github.com/PickleNik/whiteboard-vue3.git; cd whiteboard-vue3`
+2. `npm install`
+3. `npm run dev`
 4. Open http://localhost:3000
 5. Code inside /src
 
