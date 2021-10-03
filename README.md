@@ -1,7 +1,7 @@
 # How To
-#1 pull
-#2 `npm install`
-#3 `npm run dev`
+1. pull
+2. `npm install`
+3. `npm run dev`
 
 ### Vue 3 + Vite + Vuex + Vue-Router + Tailwind CSS + EsLint + Prettier
 
