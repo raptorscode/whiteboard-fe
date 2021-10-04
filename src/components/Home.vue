@@ -1,5 +1,4 @@
 <template>
-    <div class="font-extrabold text-3xl mb-6">Home</div>
     <p class="mb-4">User: {{ user }}</p>
     <input
         v-model="newName"
