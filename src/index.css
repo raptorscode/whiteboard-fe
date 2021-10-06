@@ -10,6 +10,35 @@ body,
     padding: 0;
 }
 
+.rounded-4xl {
+    border-radius: 2rem /* 32px */;
+}
+.rounded-5xl {
+    border-radius: 2.5rem /* 40px */;
+}
+.rounded-6xl {
+    border-radius: 3rem /* 48px */;
+}
+.rounded-7xl {
+    border-radius: 3.5rem /* 56px */;
+}
+.rounded-8xl {
+    border-radius: 4rem /* 64px */;
+}
+.rounded-9xl {
+    border-radius: 4.5rem /* 72px */;
+}
+.rounded-xxl {
+    border-radius: 5rem /* 80px */;
+}
+
+.link {
+    @apply hover:text-indigo-600 px-4 py-2 transition duration-200 rounded-xl w-1/2 text-right;
+}
+.link-active {
+    @apply hover:text-white text-white bg-indigo-500 hover:bg-indigo-500;
+}
+
 /* example minifying inline-classes (Card.vue) */
 .card {
     @apply bg-gray-100 p-4 border border-gray-300 overflow-hidden rounded-3xl relative;

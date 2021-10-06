@@ -1,12 +1,28 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../components/Home.vue'
-import Top from '../top/Default.vue'
+import Home from './Home.vue'
+import Top from './components/top/Default.vue'
 const routes = [
     {
         path: '/',
         name: 'Home',
         components: {
             default: Home,
+            top: Top,
+        },
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        components: {
+            default: () => import('./Login.vue'),
+            top: Top,
+        },
+    },
+    {
+        path: '/signup',
+        name: 'Signup',
+        components: {
+            default: () => import('./SignUp.vue'),
             top: Top,
         },
     },
@@ -18,11 +34,11 @@ const routes = [
         // which is lazy-loaded when the route is visited.
         components: {
             default: () =>
-                import(
-                    /* webpackChunkName: "about" */ '../components/Hello.vue'
-                ),
+                import(/* webpackChunkName: "about" */ './Hello.vue'),
             top: () =>
-                import(/* webpackChunkName: "about" */ '../top/Hello.vue'),
+                import(
+                    /* webpackChunkName: "about" */ './components/top/Hello.vue'
+                ),
         },
     },
 ]

@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import card from './card.vue'
+import card from './components/card.vue'
 
 const count = ref(0)
 </script>
