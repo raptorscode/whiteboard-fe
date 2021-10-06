@@ -10,48 +10,24 @@
             xl:col-span-1
             flex flex-col
             items-end
-            pt-20
+            pt-32
             pr-4
             gap-2
         "
     >
-        <router-link
-            class="
-                hover:bg-blue-400 hover:text-white
-                px-4
-                py-2
-                transition
-                duration-200
-                rounded-xl
-                w-1/2
-                text-right
-            "
-            active-class="text-white bg-blue-500 hover:bg-blue-500 hover:text-white transition duration-0"
-            to="/"
-            >Home</router-link
-        >
-        <router-link
-            class="
-                hover:bg-blue-400 hover:text-white
-                px-4
-                py-2
-                transition
-                duration-200
-                rounded-xl
-                w-1/2
-                text-right
-            "
-            active-class="text-white bg-blue-500 hover:bg-blue-500 hover:text-white transition duration-0"
-            to="/hello"
-            >Hello</router-link
-        >
-        <!-- <router-link class="hover:text-black" to="/users">Users</router-link> -->
+        <router-link class="link" active-class="link-active" to="/">
+            Home
+        </router-link>
+        <router-link class="link" active-class="link-active" to="/hello">
+            Hello
+        </router-link>
     </nav>
     <div class="md:col-span-2 lg:col-span-3 xl:col-span-5 flex flex-col">
         <!-- HEADER -->
         <div
             class="
-                p-4
+                py-8
+                pr-8
                 text-black text-xl
                 sm:text-2xl
                 lg:text-3xl
@@ -61,14 +37,24 @@
                 justify-between
             "
         >
-            / <router-view name="top" />
+            <div class="flex flex-row text-gray-700">
+                <router-view name="top" />
+            </div>
             <div class="text-gray-600 text-xl">
-                <!-- <router-link class="hover:text-black" to="/signup">
-                SignUp
-            </router-link>
-            <router-link class="hover:text-black" to="/login">
-                Login
-            </router-link> -->
+                <router-link
+                    class="link"
+                    active-class="link-active"
+                    to="/signup"
+                >
+                    SignUp
+                </router-link>
+                <router-link
+                    class="link"
+                    active-class="link-active"
+                    to="/login"
+                >
+                    Login
+                </router-link>
             </div>
         </div>
 
@@ -80,7 +66,7 @@
                 border
                 bg-white
                 border-gray-300
-                rounded-3xl rounded-br-none
+                rounded-br-none rounded-5xl
             "
         >
             <router-view />
