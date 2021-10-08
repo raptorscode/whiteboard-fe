@@ -6,7 +6,7 @@ const count = ref(0)
 </script>
 
 <template>
-    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4">
+    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 p-4">
         <card
             title="Recommended IDE setup:"
             image="https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"

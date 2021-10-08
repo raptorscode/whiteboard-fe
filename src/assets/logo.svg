@@ -8,7 +8,7 @@
     <symbol id="underline" stroke="currentColor" viewBox="0 0 14 4">
         <path fill="none"
             d="M1 3C1 3 6 2 13 2"
-            stroke-width="0.5"
+            stroke-width="0.42"
             stroke-linecap="round"
         />
     </symbol>

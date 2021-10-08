@@ -2,6 +2,8 @@
     <!-- LEFT DRAWER -->
     <nav
         class="
+            tabs
+            my-auto
             text-gray-600 text-xl
             font-bold
             bg-gray-100
@@ -9,67 +11,66 @@
             lg:col-span-1
             xl:col-span-1
             flex flex-col
+            justify-center
             items-end
-            pt-32
+            pt-4
             pr-4
+            relative
             gap-2
         "
+        style="height: min-content"
     >
-        <router-link class="link" active-class="link-active" to="/">
+        <router-link
+            class="link tabs-item z-10"
+            exact-active-class="link-active active"
+            to="/signup"
+        >
+            Sign Up
+        </router-link>
+        <router-link
+            class="link tabs-item z-10"
+            exact-active-class="link-active active"
+            to="/signin"
+        >
+            Sign In
+        </router-link>
+        <router-link
+            class="link tabs-item z-10"
+            exact-active-class="link-active active"
+            to="/"
+        >
             Home
         </router-link>
-        <router-link class="link" active-class="link-active" to="/hello">
+        <router-link
+            class="link tabs-item z-10"
+            exact-active-class="link-active active"
+            to="/hello"
+        >
             Hello
         </router-link>
+        <span
+            class="
+                tab-item-animate
+                rounded-xl
+                bg-indigo-600
+                transition-transform
+                duration-200
+            "
+        ></span>
     </nav>
-    <div class="md:col-span-2 lg:col-span-3 xl:col-span-5 flex flex-col">
-        <!-- HEADER -->
-        <div
-            class="
-                py-8
-                pr-8
-                text-black text-xl
-                sm:text-2xl
-                lg:text-3xl
-                font-extrabold
-                bg-gray-100
-                flex
-                justify-between
-            "
-        >
-            <div class="flex flex-row text-gray-700">
-                <router-view name="top" />
-            </div>
-            <div class="text-gray-600 text-xl">
-                <router-link
-                    class="link"
-                    active-class="link-active"
-                    to="/signup"
-                >
-                    SignUp
-                </router-link>
-                <router-link
-                    class="link"
-                    active-class="link-active"
-                    to="/login"
-                >
-                    Login
-                </router-link>
-            </div>
-        </div>
-
-        <!-- MAIN PAGE -->
-        <main
-            class="
-                h-full
-                p-6
-                border
-                bg-white
-                border-gray-300
-                rounded-br-none rounded-5xl
-            "
-        >
-            <router-view />
-        </main>
-    </div>
+    <!-- MAIN PAGE -->
+    <main
+        class="
+            h-full
+            md:col-span-2
+            lg:col-span-3
+            xl:col-span-5
+            flex flex-col
+            overflow-auto
+            bg-white
+            rounded-3xl rounded-br-none rounded-tr-none
+        "
+    >
+        <router-view />
+    </main>
 </template>

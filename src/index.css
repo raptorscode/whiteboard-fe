@@ -1,3 +1,4 @@
+/* minify inline-classes via @apply directive */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,16 +33,43 @@ body,
     border-radius: 5rem /* 80px */;
 }
 
-.link {
-    @apply hover:text-indigo-600 px-4 py-2 transition duration-200 rounded-xl w-1/2 text-right;
+.tab-item-animate {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    height: 2.75rem;
+    width: calc(50% - 0.5rem);
 }
-.link-active {
-    @apply hover:text-white text-white bg-indigo-500 hover:bg-indigo-500;
+.tabs .tabs-item:first-child.active ~ .tab-item-animate {
+    transform: translateY(0);
+}
+.tabs .tabs-item:nth-child(2).active ~ .tab-item-animate {
+    transform: translateY(calc(100% + 0.5rem));
+}
+.tabs .tabs-item:nth-child(3).active ~ .tab-item-animate {
+    transform: translateY(calc((100% + 0.5rem) * 2));
+}
+.tabs .tabs-item:nth-child(4).active ~ .tab-item-animate {
+    transform: translateY(calc((100% + 0.5rem) * 3));
 }
 
-/* example minifying inline-classes (Card.vue) */
+.link {
+    @apply hover:text-indigo-600 hover:bg-indigo-100 px-4 py-2 transition duration-75 rounded-xl w-1/2 text-right whitespace-nowrap;
+}
+.link-active {
+    @apply text-white hover:text-white hover:bg-transparent;
+}
+
+.glass {
+    /* frosted glass effect, great on top of pictures (e.g. SignIn.vue) */
+    backdrop-filter: blur(0.25rem) saturate(180%);
+    -webkit-backdrop-filter: blur(0.25rem) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.5);
+    /* border: 1px solid rgba(209, 213, 219, 0.3); */
+}
+
 .card {
-    @apply bg-gray-100 p-4 border border-gray-300 overflow-hidden rounded-3xl relative;
+    @apply bg-gray-100 p-4 border border-gray-300 overflow-hidden rounded-2xl relative;
 }
 .badge {
     @apply absolute top-4 right-4 bg-green-500 font-extrabold text-white rounded-full py-1 px-3 text-sm;
