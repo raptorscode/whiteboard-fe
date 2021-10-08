@@ -1,22 +1,27 @@
 <template>
-    <p class="mb-4">User: {{ user }}</p>
-    <input
-        v-model="newName"
-        type="text"
-        class="p-2 mr-4 border-2 border-indigo-600 rounded-lg"
-    />
-    <button
-        @click="saveName"
-        class="
-            text-white
-            border-2 border-indigo-600
-            bg-indigo-600
-            p-2
-            rounded-lg
-        "
-    >
-        Submit
-    </button>
+    <div class="p-4 flex flex-col">
+        <p class="mb-4"><b>user.name:</b> {{ user }}</p>
+        <div class="flex">
+            <input
+                v-model="newName"
+                type="text"
+                class="p-2 mr-4 border-2 border-purple-600 rounded-xl"
+            />
+            <button
+                @click="saveName"
+                class="
+                    text-white
+                    border-2 border-purple-600
+                    bg-purple-600
+                    py-2
+                    px-4
+                    rounded-xl
+                "
+            >
+                Submit
+            </button>
+        </div>
+    </div>
 </template>
 
 <script setup>

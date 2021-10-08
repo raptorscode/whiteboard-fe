@@ -11,6 +11,8 @@ body,
     padding: 0;
 }
 
+/* todo @base */
+
 .rounded-4xl {
     border-radius: 2rem /* 32px */;
 }
@@ -33,44 +35,57 @@ body,
     border-radius: 5rem /* 80px */;
 }
 
-.tab-item-animate {
-    top: 1rem;
-    right: 1rem;
-    position: absolute;
-    height: 2.75rem;
-    width: calc(50% - 0.5rem);
+/*--- NAV START ---*/
+.nav {
+    height: min-content;
+    @apply text-gray-600 text-xl font-bold md:col-span-1 lg:col-span-1 xl:col-span-1 flex flex-col justify-center items-end p-4 relative gap-2;
 }
-.tabs .tabs-item:first-child.active ~ .tab-item-animate {
+
+.nav .link:first-child.link-active ~ .link-anime {
     transform: translateY(0);
 }
-.tabs .tabs-item:nth-child(2).active ~ .tab-item-animate {
+.nav .link:nth-child(2).link-active ~ .link-anime {
     transform: translateY(calc(100% + 0.5rem));
 }
-.tabs .tabs-item:nth-child(3).active ~ .tab-item-animate {
+.nav .link:nth-child(3).link-active ~ .link-anime {
     transform: translateY(calc((100% + 0.5rem) * 2));
 }
-.tabs .tabs-item:nth-child(4).active ~ .tab-item-animate {
+.nav .link:nth-child(4).link-active ~ .link-anime {
     transform: translateY(calc((100% + 0.5rem) * 3));
 }
 
 .link {
-    @apply hover:text-indigo-600 hover:bg-indigo-100 px-4 py-2 transition duration-75 rounded-xl w-1/2 text-right whitespace-nowrap;
+    @apply hover:text-purple-600 hover:bg-purple-100 px-8 py-2 transition duration-75 rounded-xl w-1/2 text-right whitespace-nowrap z-10;
 }
 .link-active {
-    @apply text-white hover:text-white hover:bg-transparent;
+    @apply text-white transform translate-x-4 pointer-events-none;
 }
 
+.link-anime {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    height: 2.75rem;
+    width: calc(50% - 1rem);
+    transform: scale(0);
+    /* TODO: scale(0) causes blinking on reload, except for '/' route */
+    @apply rounded-xl bg-purple-600 transition-transform duration-75;
+}
+
+/*--- NAV END ---*/
+
+/* frosted glass effect, great on top of pictures (e.g. SignIn.vue) */
 .glass {
-    /* frosted glass effect, great on top of pictures (e.g. SignIn.vue) */
     backdrop-filter: blur(0.25rem) saturate(180%);
     -webkit-backdrop-filter: blur(0.25rem) saturate(180%);
     background-color: rgba(255, 255, 255, 0.5);
     /* border: 1px solid rgba(209, 213, 219, 0.3); */
 }
 
+/* TODO: move to card.vue , scoped*/
 .card {
     @apply bg-gray-100 p-4 border border-gray-300 overflow-hidden rounded-2xl relative;
 }
 .badge {
-    @apply absolute top-4 right-4 bg-green-500 font-extrabold text-white rounded-full py-1 px-3 text-sm;
+    @apply absolute top-4 right-4 bg-orange-500 font-extrabold text-white rounded-full py-1 px-3 text-sm;
 }

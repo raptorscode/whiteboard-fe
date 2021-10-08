@@ -32,7 +32,7 @@
             <div>
                 <img
                     class="mx-auto h-12 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src="https://tailwindui.com/img/logos/workflow-mark-purple-600.svg"
                     alt="Workflow"
                 />
                 <h2
@@ -72,8 +72,8 @@
                                 text-gray-900
                                 rounded-t-md
                                 focus:outline-none
-                                focus:ring-indigo-500
-                                focus:border-indigo-500
+                                focus:ring-purple-500
+                                focus:border-purple-500
                                 focus:z-10
                                 sm:text-sm
                             "
@@ -101,8 +101,8 @@
                                 text-gray-900
                                 rounded-b-md
                                 focus:outline-none
-                                focus:ring-indigo-500
-                                focus:border-indigo-500
+                                focus:ring-purple-500
+                                focus:border-purple-500
                                 focus:z-10
                                 sm:text-sm
                             "
@@ -120,8 +120,8 @@
                             class="
                                 h-4
                                 w-4
-                                text-indigo-600
-                                focus:ring-indigo-500
+                                text-purple-600
+                                focus:ring-purple-500
                                 border-gray-300
                                 rounded
                             "
@@ -139,8 +139,8 @@
                             href="#"
                             class="
                                 font-medium
-                                text-indigo-600
-                                hover:text-indigo-500
+                                text-purple-600
+                                hover:text-purple-500
                             "
                         >
                             Forgot your password?
@@ -164,12 +164,12 @@
                             font-medium
                             rounded-md
                             text-white
-                            bg-indigo-600
-                            hover:bg-indigo-700
+                            bg-purple-600
+                            hover:bg-purple-700
                             focus:outline-none
                             focus:ring-2
                             focus:ring-offset-2
-                            focus:ring-indigo-500
+                            focus:ring-purple-500
                         "
                     >
                         <span
@@ -186,8 +186,8 @@
                                 class="
                                     h-5
                                     w-5
-                                    text-indigo-500
-                                    group-hover:text-indigo-400
+                                    text-purple-500
+                                    group-hover:text-purple-400
                                 "
                                 aria-hidden="true"
                             />
