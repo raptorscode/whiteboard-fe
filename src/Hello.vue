@@ -50,10 +50,10 @@ const count = ref(0)
         type="button"
         class="
             text-white
-            active:bg-purple-700
-            hover:bg-purple-500
-            border-2 border-purple-600
-            bg-purple-600
+            active:bg-gray-900
+            hover:bg-gray-500
+            border-2 border-gray-800
+            bg-gray-800
             p-2
             fixed
             bottom-4

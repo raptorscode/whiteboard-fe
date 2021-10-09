@@ -11,34 +11,12 @@ body,
     padding: 0;
 }
 
-/* todo @base */
-
-.rounded-4xl {
-    border-radius: 2rem /* 32px */;
-}
-.rounded-5xl {
-    border-radius: 2.5rem /* 40px */;
-}
-.rounded-6xl {
-    border-radius: 3rem /* 48px */;
-}
-.rounded-7xl {
-    border-radius: 3.5rem /* 56px */;
-}
-.rounded-8xl {
-    border-radius: 4rem /* 64px */;
-}
-.rounded-9xl {
-    border-radius: 4.5rem /* 72px */;
-}
-.rounded-xxl {
-    border-radius: 5rem /* 80px */;
-}
+/* todo @base rounded-xxl */
 
 /*--- NAV START ---*/
 .nav {
     height: min-content;
-    @apply text-gray-600 text-xl font-bold md:col-span-1 lg:col-span-1 xl:col-span-1 flex flex-col justify-center items-end p-4 relative gap-2;
+    @apply text-gray-800 text-xl font-bold md:col-span-1 lg:col-span-1 xl:col-span-1 flex flex-col justify-center items-end p-4 relative gap-2;
 }
 
 .nav .link:first-child.link-active ~ .link-anime {
@@ -55,7 +33,7 @@ body,
 }
 
 .link {
-    @apply hover:text-purple-600 hover:bg-purple-100 px-8 py-2 transition duration-75 rounded-xl w-1/2 text-right whitespace-nowrap z-10;
+    @apply rounded-2xl hover:text-gray-200 hover:bg-gray-800 text-gray-200 px-8 py-2 transition duration-75 w-3/4 text-right whitespace-nowrap z-10;
 }
 .link-active {
     @apply text-white transform translate-x-4 pointer-events-none;
@@ -66,19 +44,19 @@ body,
     right: 1rem;
     position: absolute;
     height: 2.75rem;
-    width: calc(50% - 1rem);
+    width: calc(75% - 1.5rem);
     transform: scale(0);
     /* TODO: scale(0) causes blinking on reload, except for '/' route */
-    @apply rounded-xl bg-purple-600 transition-transform duration-75;
+    @apply rounded-2xl bg-gray-600 transition-transform duration-75;
 }
 
 /*--- NAV END ---*/
 
 /* frosted glass effect, great on top of pictures (e.g. SignIn.vue) */
 .glass {
-    backdrop-filter: blur(0.25rem) saturate(180%);
-    -webkit-backdrop-filter: blur(0.25rem) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.25rem) saturate(200%);
+    -webkit-backdrop-filter: blur(0.25rem) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.75);
     /* border: 1px solid rgba(209, 213, 219, 0.3); */
 }
 
