@@ -22,11 +22,11 @@
                 overflow-hidden
                 w-full
                 h-full
-                my-10
+                my-20
                 mx-auto
                 rounded-full
             "
-            style="height: calc(100vh - 5rem); width: calc(100vh - 5rem)"
+            style="height: calc(100vh - 10rem); width: calc(100vh - 10rem)"
         >
             <div
                 class="
@@ -43,8 +43,24 @@
                     h-full
                 "
             >
-                <div class="max-w-md w-full space-y-8 glass p-10 rounded-3xl">
-                    <div class="flex flex-nowrap items-end justify-between">
+                <div
+                    class="
+                        text-white
+                        max-w-md
+                        w-full
+                        rounded-3xl
+                        text-2xl
+                        flex flex-col
+                        space-y-2
+                        glass
+                        p-10
+                    "
+                    style="box-shadow: inset 0 0 10rem 5rem #fff8"
+                >
+                    <div class="flex flex-col flex-nowrap justify-end gap-6">
+                        <!-- <svg class="text-gray-800 w-12 h-12">
+                            <use href="src/assets/icon.svg#icon" />
+                        </svg> -->
                         <h2
                             class="
                                 text-center text-3xl
@@ -52,15 +68,12 @@
                                 text-gray-900
                             "
                         >
-                            Sign in
+                            Sign in to your account
                         </h2>
-                        <svg class="text-white w-12 h-12">
-                            <use href="src/assets/icon.svg#icon" />
-                        </svg>
                     </div>
-                    <form class="mt-8 space-y-6" action="#" method="POST">
+                    <form class="space-y-6" action="#" method="POST">
                         <input type="hidden" name="remember" value="true" />
-                        <div class="rounded-md shadow-sm -space-y-px">
+                        <div class="rounded-xl shadow-sm -space-y-px">
                             <div>
                                 <label for="email-address" class="sr-only"
                                     >Email address</label
@@ -82,7 +95,7 @@
                                         border border-gray-300
                                         placeholder-gray-500
                                         text-gray-900
-                                        rounded-t-md
+                                        rounded-t-xl
                                         focus:outline-none
                                         focus:ring-gray-500
                                         focus:border-gray-500
@@ -113,7 +126,7 @@
                                         border border-gray-300
                                         placeholder-gray-500
                                         text-gray-900
-                                        rounded-b-md
+                                        rounded-b-xl
                                         focus:outline-none
                                         focus:ring-gray-500
                                         focus:border-gray-500
@@ -162,7 +175,41 @@
                             </div>
                         </div>
 
-                        <div>
+                        <div class="flex space-x-4">
+                            <button
+                                class="
+                                    p-4
+                                    text-sm
+                                    font-medium
+                                    bg-gray-100
+                                    text-gray-800
+                                    hover:text-gray-900
+                                    rounded-full
+                                    focus:outline-none
+                                    focus:ring-2
+                                    focus:ring-offset-2
+                                    focus:ring-gray-500
+                                "
+                            >
+                                Go
+                            </button>
+                            <button
+                                class="
+                                    p-4
+                                    text-sm
+                                    font-medium
+                                    bg-gray-100
+                                    text-gray-800
+                                    hover:text-gray-900
+                                    rounded-full
+                                    focus:outline-none
+                                    focus:ring-2
+                                    focus:ring-offset-2
+                                    focus:ring-gray-500
+                                "
+                            >
+                                Fac
+                            </button>
                             <button
                                 type="submit"
                                 class="
@@ -171,12 +218,11 @@
                                     w-full
                                     flex
                                     justify-center
-                                    py-2
-                                    px-4
+                                    p-4
                                     border border-transparent
                                     text-sm
                                     font-medium
-                                    rounded-md
+                                    rounded-xl
                                     text-white
                                     bg-gray-800
                                     hover:bg-gray-900
@@ -212,6 +258,7 @@
                     </form>
                 </div>
             </div>
+            -->
         </div>
     </div>
 </template>
@@ -230,6 +277,12 @@ export default {
 /* -webkit-transform: translate3d(0, 0, 0); is forcing hardware acceleration */
 /* transition: & opacity: properties are hardware-accelerated by default */
 /* other properties aren't */
+
+.nice {
+    background: -webkit-linear-gradient(0deg, #f88, #f8f, #88f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .shader {
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);

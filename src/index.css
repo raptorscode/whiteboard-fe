@@ -37,7 +37,7 @@ body,
 }
 
 .link {
-    @apply rounded-2xl hover:text-gray-200 hover:bg-gray-800 text-gray-200 px-8 py-2 w-3/4 text-right whitespace-nowrap z-10;
+    @apply rounded-2xl hover:text-gray-200 hover:bg-gray-800 text-gray-200 px-8 py-2 w-3/4 text-right whitespace-nowrap z-10 transition-transform duration-300;
 }
 .link-active {
     @apply text-white transform translate-x-4 pointer-events-none;
@@ -51,7 +51,7 @@ body,
     width: calc(75% - 1.5rem);
     transform: scale(0);
     /* TODO: scale(0) causes blinking on reload, except for '/' route */
-    @apply rounded-2xl bg-gray-600 transition-transform duration-75;
+    @apply rounded-2xl bg-gray-600 transition-transform duration-300;
 }
 
 /*--- NAV END ---*/
@@ -60,7 +60,7 @@ body,
 .glass {
     backdrop-filter: blur(0.25rem) saturate(200%);
     -webkit-backdrop-filter: blur(0.25rem) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.25);
     /* border: 1px solid rgba(209, 213, 219, 0.3); */
 }
 
